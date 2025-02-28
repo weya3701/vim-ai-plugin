@@ -21,6 +21,8 @@
 
         let g:AIapis = "<apis目錄>run2.py"
 
+![Images](https://github.com/weya3701/vim-ai-plugin/blob/deploy/static/images/vim_version.png)
+
 ## 操作模式
 
 * 整頁模式(本頁)：指令→ :AI，輸入命令後直接整頁送到API並直接返回結果於頁尾。
