@@ -9,6 +9,8 @@
             vim --version 
         可確認版本及支援度
 
+![Images](https://github.com/weya3701/vim-ai-plugin/blob/deploy/static/images/vim_version.png)
+
 ## 安裝
 
 * * *
@@ -20,8 +22,6 @@
 * 設定.vimrc檔案，並新增參數
 
         let g:AIapis = "<apis目錄>run2.py"
-
-![Images](https://github.com/weya3701/vim-ai-plugin/blob/deploy/static/images/vim_version.png)
 
 ## 操作模式
 
@@ -36,3 +36,5 @@
 * 段落提示模式(新分頁)：指令→ :AIanalysis + <提示詞>，在頁面中選取片段後輸入指令加上提示詞，會將已選取片段送到API並返回新分頁。
 
 * 段落提示模式(本頁)：指令→ :AIanalysis + <提示詞>+<line number>，在頁面中選取片段後輸入指令加上提示詞及行號，會將已選取片段送到API並返回結果於本頁指定行號。
+
+![Images](https://github.com/weya3701/vim-ai-plugin/blob/deploy/static/images/ss.png)
