@@ -2,7 +2,7 @@
 
 function! CallAI(stpe="")
     let arg = getline(1, '$')
-    let cmd = "python  ~/Documents/workspace/repositories/geminiDemo/run2.py " . '"' . join(arg, ',') . '"'
+    let cmd = "python " . g:AIapis .  '"' . join(arg, ',') . '"'
     let res = system(cmd) 
     if a:stpe == "newpage"
         tabnew
@@ -18,6 +18,7 @@ function! CallAI(stpe="")
 endfunction
 
 function! CallAIanalysis(stpe="", prompt="", put=0)
+
     if visualmode() == ""
         echo "請先選取文字"
         return
@@ -28,7 +29,7 @@ function! CallAIanalysis(stpe="", prompt="", put=0)
 
     let arg = a:prompt . "\n" . content 
 
-    let cmd = "python  ~/Documents/workspace/repositories/geminiDemo/run2.py " . '"' . arg . '"'
+    let cmd = "python " . g:AIapis . '"' . arg . '"'
     let res = system(cmd) 
     if a:stpe == "newpage"
         tabnew
