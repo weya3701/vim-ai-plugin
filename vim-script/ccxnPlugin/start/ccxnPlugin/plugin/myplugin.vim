@@ -2,7 +2,7 @@
 
 function! CallAI(stpe="")
     let arg = getline(1, '$')
-    let cmd = "python " . g:AIapis . '"' . join(arg, ',') . '"'
+    let cmd = "python " . g:AIapis .  '"' . join(arg, ',') . '"'
     let res = system(cmd) 
     if a:stpe == "newpage"
         tabnew
@@ -12,13 +12,13 @@ function! CallAI(stpe="")
     else
         call append("$", "")
         call append("$", "")
-        call append("$", "========================================================")
         call append("$", "AI回覆: ")
         call append("$", split(res, "\n"))
     endif
 endfunction
 
 function! CallAIanalysis(stpe="", prompt="", put=0)
+
     if visualmode() == ""
         echo "請先選取文字"
         return
@@ -29,7 +29,7 @@ function! CallAIanalysis(stpe="", prompt="", put=0)
 
     let arg = a:prompt . "\n" . content 
 
-    let cmd = "python " . g:AIapis . '"' . join(arg, ',') . '"'
+    let cmd = "python " . g:AIapis . '"' . arg . '"'
     let res = system(cmd) 
     if a:stpe == "newpage"
         tabnew
@@ -39,7 +39,6 @@ function! CallAIanalysis(stpe="", prompt="", put=0)
     else
         call append("$", "")
         call append("$", "")
-        call append("$", "========================================================")
         call cursor(str2nr(a:put), 1)
         call append(str2nr(a:put), "AI回覆: ")
         call append(str2nr(a:put)+1, split(res, "\n"))
