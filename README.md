@@ -9,6 +9,8 @@
             vim --version 
         可確認版本及支援度
 
+![Images](https://github.com/weya3701/vim-ai-plugin/blob/deploy/static/images/vim_version.png)
+
 ## 安裝
 
 * * *
@@ -20,8 +22,6 @@
 * 設定.vimrc檔案，並新增參數
 
         let g:AIapis = "<apis目錄>run2.py"
-
-![Images](https://github.com/weya3701/vim-ai-plugin/blob/deploy/static/images/vim_version.png)
 
 ## 操作模式
 
